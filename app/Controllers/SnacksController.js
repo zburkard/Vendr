@@ -8,23 +8,31 @@ function _drawSnacks() {
   snacks.forEach(s => template += s.ListTemplate)
   setHTML('snack-list', template)
 }
+
 function _drawSelected() {
-  let snacks = appState.selectedSnacks
-  setHTML('selected-snack', snacks.SelectedTemplate)
+let selected = appState.selectedSnacks
+  setHTML('selected-snack', selected.SelectedTemplate)
 }
 
 function _drawMyCart() {
-  let snacks = appState.selectedSnacks
-  let template = ''
-  snacks.forEach(s => template += s.SelectedTemplate)
-  setHTML('selected-snack', template)
+  console.log('drawing cart')
+  let cart = appState.myCart
+  setHTML('cart', cart.CartTemplate)
 }
+// function _drawMyCart() {
+//   console.log('drawing cart')
+//   let cart = appState.myCart
+//   let template = ''
+//   cart.forEach(s => template += s.CartTemplate)
+//   setHTML('cart', template)
+// }
 
 export class SnacksController {
   constructor() {
     _drawSnacks()
     // _drawMyCart()
-    // _drawSelected()
+    appState.on('selectedSnacks', _drawSelected)
+    appState.on('myCart', _drawMyCart)
   }
 
   setSelected(name) {
@@ -32,9 +40,9 @@ export class SnacksController {
   }
 
 
-  // getMyCart() {
-  //   snacksService.getMyCart()
-  // }
+  getSelected() {
+    snacksService.getSelected()
+  }
 
 
 }

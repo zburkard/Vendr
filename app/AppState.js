@@ -23,6 +23,7 @@ class AppState extends EventEmitter {
     })
 
   ]
+  myCart = []
   selectedSnacks = []
   money = 0
 }

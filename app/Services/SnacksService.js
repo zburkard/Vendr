@@ -9,17 +9,18 @@ class SnacksService {
 
   setSelected(name) {
     let selectedSnack = appState.snacks.find(s => s.name == name)
-    console.log('selected', selectedSnack)
-    appState.selectedSnacks.push(selectedSnack)
+    // console.log('selected', selectedSnack)
+    appState.selectedSnacks = selectedSnack
+    console.log(selectedSnack)
+
   }
 
-  getMyCart() {
-    appState.snacks.forEach(s => s.price == price)
-    if (appState.money >= price) {
-      appState.coins - price
+  getSelected() {
+    let cart = appState.selectedSnacks
+    appState.myCart = cart
     }
   }
-}
+
 
 
 
