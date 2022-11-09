@@ -27,11 +27,24 @@
   </header>
   <main>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+      <section id="snack-list" class="row">
+        <!-- <div class="col-2">Snack</div>
+        <div class="col-2">Snack</div>
+        <div class="col-2">Snack</div> -->
+      </section>
+      <section id="selected-snack" class="row">
+        <div class="col-8">
         </div>
-      </div>
+      </section>
+      <section class="row">
+        <div class="col-3 card">
+          <button onclick="app.moneyController.addMoney()">Add Money</button>
+        </div>
+        <div id="money" class="row">
+          <!-- Money going here -->
+
+        </div>
+      </section>
     </div>
   </main>
   <footer class="bg-dark text-light">
