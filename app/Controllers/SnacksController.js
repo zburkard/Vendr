@@ -20,7 +20,7 @@ function _drawMyCart() {
   setHTML('cart', cart.CartTemplate)
 }
 // function _drawMyCart() {
-//   console.log('drawing cart')
+//   // console.log('drawing cart')
 //   let cart = appState.myCart
 //   let template = ''
 //   cart.forEach(s => template += s.CartTemplate)

@@ -2,10 +2,7 @@ import { appState } from "../AppState.js";
 
 class SnacksService {
 
-  // buySnacks(name) {
-  //   let snack = appState.snacks.find(s => s.name == name)
-  //   appState.selectedSnacks += snack
-  // }
+
 
   setSelected(name) {
     let selectedSnack = appState.snacks.find(s => s.name == name)
@@ -14,7 +11,10 @@ class SnacksService {
     console.log(selectedSnack)
 
   }
-
+  // getSelected(name) {
+  //   let cart = appState.selectedSnacks.find(s => s.name == name)
+  //   appState.myCart += cart
+  // }
   getSelected() {
     let cart = appState.selectedSnacks
     appState.myCart = cart

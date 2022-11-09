@@ -16,7 +16,6 @@ export class Snack {
     <h3>${this.price}</h3>
     <button class="btn" onclick="app.snacksController.getSelected('${this.name}')">Buy</button>
     </div>
-    
     `
   }
   get CartTemplate() {
